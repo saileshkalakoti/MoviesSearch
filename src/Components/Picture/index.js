@@ -12,7 +12,7 @@ export default class Picture extends React.Component {
   render() {
     return (
       <div>
-        <img src={this.state.path+this.props.pic} className="pic"/>
+        <img src={this.state.path+this.props.pic} className="pic" alt="movie-logo"/>
         {console.log('\nPath of image is '+this.state.path)}
     </div>
   

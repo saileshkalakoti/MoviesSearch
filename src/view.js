@@ -33,7 +33,7 @@ class Rectangle extends React.Component
     this.setState({
       items:[],
     })
-    if(id=='')
+    if(id==='')
     return;
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=d6b5abd1281b3030a82e8c4617beeed4&query=${id}`)
       .then((response) => response.json())
@@ -67,7 +67,7 @@ class Rectangle extends React.Component
            </div>
 
         <Search onValueChange={this.onValChange} onGoClick={this.onGoClick} />
-        {this.state.count==0?<div className="warning"><center>No results Found</center></div>:
+        {this.state.count===0?<div className="warning"><center>No results Found</center></div>:
         <div className="Div3">
             {
               this.state.items.map(item => (
