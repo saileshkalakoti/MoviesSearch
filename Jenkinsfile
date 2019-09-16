@@ -12,7 +12,7 @@ node {
     stage('Deploy'){
       if(env.BRANCH_NAME == 'master'){
         sh 'docker build -t react-app --no-cache .'
-        sh 'docker run -it -p 3001:3000 react-app'
+        sh 'docker run -p 3001:3000 react-app'
       }
     }
   }
